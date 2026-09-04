@@ -15,6 +15,7 @@ outImg = Image.new('RGBA', (outDim[0], outDim[1]))
 i = 0
 j = 0
 for subdir, dirs, files in os.walk(inputDir):
+    files.sort()
     for file in files:
         filepath = subdir + os.sep + file
         print ("loading " + filepath)
